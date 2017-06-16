@@ -34,7 +34,7 @@ const rules = [
         use: [{
             loader: 'babel-loader',
             options: {
-                presets: ['es2015']
+                presets: ['es2015','react']
             }
         }]
     }
@@ -48,7 +48,9 @@ if (NODE_ENV === 'production') {
     }));
 
     Object.assign(resolve.alias, {
-        lodash: 'lodash/lodash.min.js'
+        lodash: 'lodash/lodash.min.js',
+        react:'react/dist/react.min.js',
+        'react-dom':'react-dom/dist/react-dom.min.js/'
     });
 
     rules.unshift({

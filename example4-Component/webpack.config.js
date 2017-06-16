@@ -60,7 +60,7 @@ if (NODE_ENV === 'production') {
 
 module.exports = {
     entry: {
-        app: ['./app/js/main.js'],
+        app: ['./app/js/main.jsx'],
         vendor: ['lodash']
     },
     resolve: resolve,

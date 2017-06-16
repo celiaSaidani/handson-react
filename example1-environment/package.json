@@ -5,9 +5,15 @@
   "main": "index.js",
   "scripts": {
     "serve": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback --content-base app/root",
+    "build" : "node node_modules/webpack/bin/webpack.js"
+    
   },
   "author": "jbpetit@excilys.com",
   "license": "MIT",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "transfer-webpack-plugin": "^0.1.4",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

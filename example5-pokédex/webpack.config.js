@@ -5,7 +5,9 @@ const webpack = require('webpack');
 const NODE_ENV = process.env.NODE_ENV;
 
 let resolve = {
-    alias: {},
+    alias: {
+        bulma:'bulma/css/bulma.css'
+    },
     extensions: ['.js', '.jsx']
 };
 
@@ -31,6 +33,7 @@ const rules = [
             }
         }]
     },
+
     {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -40,6 +43,14 @@ const rules = [
                 presets: ['es2015', 'react']
             }
         }]
+    },
+    {
+        test: /\.css$/,
+        use: [
+            {loader: 'style-loader'},
+            {loader:'css-loader'}
+
+        ]
     }
 ];
 
